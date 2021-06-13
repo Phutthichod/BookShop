@@ -66,6 +66,7 @@ public class BookShop {
                     books.put(book.getKey(),book.getValue()-1);
                 }
             }
+            if(numberDifferentBook == 1) break;
             count += numberDifferentBook;
             if(numberDifferentBook == 3 && numberBeforeDiff == 5 && count == cart.getBook().size()){
                 discount -= this.discount(numberBeforeDiff);
@@ -85,7 +86,6 @@ public class BookShop {
     private Double discount(int count){
         double price = pricePerBook*count;
         switch (count){
-            case 1: price = pricePerBook; break;
             case 2: price *= 0.05; break;
             case 3: price *= 0.1; break;
             case 4: price *= 0.2; break;
