@@ -9,7 +9,7 @@ public class BookShopTest {
     @DisplayName("Test Basic")
     void basic(){
         BookShop bookShop = new BookShop();
-        Customer customer = new Customer("lisa");
+        Customer customer = new Customer(1,"lisa");
         Cart cart = new Cart(customer);
 
         Check check = bookShop.checkOut(cart);
@@ -30,7 +30,7 @@ public class BookShopTest {
     @DisplayName("Simple Discount")
     void simple(){
         BookShop bookShop = new BookShop();
-        Customer customer = new Customer("lisa");
+        Customer customer = new Customer(1,"lisa");
         Cart cart = new Cart(customer);
 
         cart.addBook(bookShop.getBookToCart(1));
@@ -71,7 +71,7 @@ public class BookShopTest {
     @DisplayName("Several Discount")
     void serveral(){
         BookShop bookShop = new BookShop();
-        Customer customer = new Customer("lisa");
+        Customer customer = new Customer(1,"lisa");
         Cart cart = new Cart(customer);
 
         cart.addBook(bookShop.getBookToCart(0));
@@ -117,7 +117,7 @@ public class BookShopTest {
     @DisplayName("Edge Cases")
     void edge(){
         BookShop bookShop = new BookShop();
-        Customer customer = new Customer("lisa");
+        Customer customer = new Customer(1,"lisa");
         Cart cart = new Cart(customer);
 
         cart.addBook(bookShop.getBookToCart(0));
