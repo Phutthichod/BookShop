@@ -50,7 +50,7 @@ public class BookShop {
             put(5, 0);
         }};
         for (Book book : cart.getBook()) {
-            final int ID = book.getID();
+            final int ID = book.getId();
             books.put(ID,books.get(ID)+1);
         }
 

@@ -1,10 +1,10 @@
 public class Book {
-    private int ID;
+    private int id;
     private String name;
     private int stock;
 
-    public Book(int ID, String name, int stock) {
-        this.ID = ID;
+    public Book(int id, String name, int stock) {
+        this.id = id;
         this.name = name;
         this.stock = stock;
     }
@@ -13,8 +13,8 @@ public class Book {
         return this.stock;
     }
 
-    public int getID(){
-        return this.ID;
+    public int getId(){
+        return this.id;
     }
 
     public String getName(){
